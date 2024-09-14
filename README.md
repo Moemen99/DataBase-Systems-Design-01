@@ -186,3 +186,87 @@ While they present challenges in cost and compatibility, their benefits make the
 ---
 
 *Note: This document provides an overview of database systems. For more detailed information, consult database management textbooks or official documentation of specific DBMS.*
+
+
+
+
+# Database Lifecycle: Analysis Phase
+
+## Overview
+
+The database lifecycle begins with a crucial analysis phase. This phase sets the foundation for the entire project and involves multiple teams working together to translate business needs into a concrete plan for development.
+
+## Process Flow
+
+```mermaid
+graph TD
+    A[Project Initiation] --> B[Divide into Services/Modules]
+    B --> C[Requirement Gathering]
+    C --> D[Requirement Document]
+    D --> E[Development Team]
+    D --> F[Testing Team]
+    E --> G[Frontend Team]
+    E --> H[Backend Team]
+    G --> I[UX Design Process]
+    H --> J[Programming]
+    H --> K[Database Design]
+    K --> L[Logical Design - ERD]
+```
+
+## Detailed Steps
+
+### 1. Project Division
+
+- The project is divided into services or modules based on Agile methodology.
+- This division allows for focused development and easier management.
+
+### 2. Requirement Gathering
+
+- **Responsible Party**: Business Consultant (BC) or System Analyst
+- **Process**:
+  - Engage in discussions with the customer or client
+  - Identify and document business needs
+- **Output**: Requirement Document
+
+### 3. Team Distribution
+
+The Requirement Document is shared with two main teams:
+1. Development Team
+2. Testing Team
+
+### 4. Development Team Breakdown
+
+The Development Team is further divided into:
+
+#### a. Frontend Team
+- **Primary Task**: UX Design Process
+- **Workflow**:
+  1. Analyze the Requirement Document
+  2. Create black and white mockups
+- **Goal**: Visualize everything in the Requirement Document
+- **Rationale**: "A picture is worth a thousand words"
+
+#### b. Backend Team
+Focuses on two main aspects:
+1. Programming
+2. Database Development
+
+### 5. Database Design Process
+
+- **Role**: Backend Developer acting as Database Designer
+- **Task**: Create a Logical Design
+- **Tool**: Entity Relationship Diagram (ERD)
+- **Purpose**: 
+  - Specify the shape of entities (tables) for the service
+  - Define relationships between entities
+
+## Key Takeaways
+
+1. The analysis phase is crucial for setting the project's direction.
+2. Multiple specialized teams work together, each with specific roles.
+3. Visual representations (mockups, ERDs) play a vital role in translating requirements into actionable plans.
+4. The database design process begins with a logical design, serving as a blueprint for the actual database implementation.
+
+---
+
+*Note: This document covers the initial analysis phase of the database lifecycle. Subsequent phases will be detailed in separate documents.*
