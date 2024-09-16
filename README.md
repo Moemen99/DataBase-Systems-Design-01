@@ -351,3 +351,77 @@ graph TD
 ---
 
 *This document provides an overview of the database development process and the various users involved in database management and usage. For more detailed information on specific topics, consult relevant database management and development resources.*
+
+
+# Entity Relationship Diagram (ERD) Overview
+
+An Entity Relationship Diagram (ERD) is a fundamental tool in database design that visually represents the structure of a database. It shows what entities exist in a business domain and how they relate to each other.
+
+## Components of an ERD
+
+An ERD consists of three main components:
+
+1. **Entities**
+2. **Attributes**
+3. **Relationships**
+
+### 1. Entities
+
+- Definition: An entity represents a table or object in the database
+- Visual Representation: Rectangles
+- Example: Customer, Order, Product
+
+### 2. Attributes
+
+- Definition: Properties or characteristics of an entity
+- Visual Representation: Ellipses
+- Example: For a Customer entity - Name, Address, Phone Number
+
+### 3. Relationships
+
+- Definition: Links between entities, typically represented by verbs
+- Visual Representation: Diamonds
+- Example: Customer "places" Order
+
+## Visual Representation
+
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER {
+        string name
+        string address
+    }
+    ORDER {
+        int orderNumber
+        date orderDate
+    }
+    ORDER ||--|{ ORDER_ITEM : contains
+    PRODUCT ||--o{ ORDER_ITEM : "ordered in"
+```
+
+## Special Considerations
+
+### Relationship Attributes
+
+Some attributes only occur when a relationship occurs. These are called relationship attributes.
+
+- Example: In a "Student enrolls in Course" relationship, the enrollment date is a relationship attribute.
+
+## Key Points
+
+1. ERDs provide a visual blueprint of database structure.
+2. Entities (rectangles) represent the main objects or concepts.
+3. Attributes (ellipses) describe the properties of entities.
+4. Relationships (diamonds) show how entities interact or connect.
+5. Some attributes are specific to relationships rather than entities.
+
+## Importance in Database Design
+
+- ERDs help translate business requirements into a logical database structure.
+- They facilitate communication between database designers, developers, and stakeholders.
+- ERDs serve as a foundation for creating the physical database schema.
+
+---
+
+*Note: The visual representation of ERDs can vary slightly depending on the notation system used (e.g., Chen notation, Crow's Foot notation). The principles, however, remain consistent across different notations.*
