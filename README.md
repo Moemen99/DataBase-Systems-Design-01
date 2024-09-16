@@ -270,3 +270,84 @@ Focuses on two main aspects:
 ---
 
 *Note: This document covers the initial analysis phase of the database lifecycle. Subsequent phases will be detailed in separate documents.*
+
+
+
+# Database Development Process and Users
+
+## Database Development Workflow
+
+### 1. Entity Relationship Diagram (ERD)
+
+As a backend developer, the first step is creating an Entity Relationship Diagram (ERD):
+
+- Purpose: Specify the shape of entities (tables) and their relationships
+- Advantage: Easier to find information about entities
+  - Example: Quickly determine if a department has a name attribute
+- Outcome: Logical design of the database structure
+
+### 2. Database Mapping
+
+- Convert the ERD to a database schema
+- Result: Actual number of tables that will be in the database
+
+### 3. Implementation
+
+- Role: Act as a database developer
+- Task: Use a Database Management System (DBMS) to create the actual database
+
+### 4. Application Development
+
+- Role: Application programmer
+- Platforms: Web, Desktop, Mobile
+- Purpose: Develop the interface through which end-users will interact with the database
+
+```mermaid
+graph TD
+    A[Requirement Document] --> B[ERD Creation]
+    B --> C[Database Mapping]
+    C --> D[Database Schema]
+    D --> E[Implementation in DBMS]
+    E --> F[Application Development]
+    F --> G[End User Interaction]
+```
+
+## Database Users
+
+1. **Database Administrator (DBA)**
+   - Not typically part of the development team
+   - Part of the client's support team post-project delivery
+   - Responsibilities:
+     - Handle database issues
+     - Maintain database health
+   - Requirements: Strong understanding of databases and SQL
+   - Note: In many development teams, backend developers collectively handle DBA responsibilities
+
+2. **System Analyst**
+   - Not a direct database user
+   - Creates the requirement document
+
+3. **Backend Developer**
+   - Combines multiple roles:
+     - Database Designer
+     - Database Developer
+     - Application Programmer
+
+4. **Business Intelligence (BI) and Big Data Specialist (Data Scientist)**
+   - Uses database data for analysis
+   - Provides insights to maximize customer profit
+   - Example analyses:
+     - Product purchase trends
+     - Best-selling products by time period
+
+5. **End User**
+   - Interacts with the database indirectly through the application
+
+## Additional Notes
+
+- Senior developers may sometimes take on the responsibility of creating the ERD and assigning user stories (tasks) to the team.
+- The backend development team often collectively acts as database administrators during the development process.
+
+---
+
+*This document provides an overview of the database development process and the various users involved in database management and usage. For more detailed information on specific topics, consult relevant database management and development resources.*
